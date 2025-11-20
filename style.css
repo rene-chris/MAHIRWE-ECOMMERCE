@@ -1,0 +1,179 @@
+/* Enhanced styles with better design, cleaner layout, improved typography, and responsive adjustments */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    line-height: 1.2;
+}
+
+/* Improved gradients with smoother transitions */
+.gradient-gold {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FF8C00 100%);
+    color: #fff;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Hero section with parallax effect and cleaner overlay */
+.hero-bg {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), 
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23667eea" width="1200" height="800"/><polygon fill="%23764ba2" points="0,800 1200,600 1200,800"/></svg>');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Cleaner floating buttons with subtle shadows and hover effects */
+.whatsapp-float, .chatbot-float {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover, .chatbot-float:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Modals and overlays with glassmorphism effect */
+.modal-overlay, .search-overlay {
+    backdrop-filter: blur(8px);
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.dark .modal-content {
+    background: rgba(26, 26, 26, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Product cards with cleaner layout and subtle borders */
+.product-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.dark .product-card {
+    border-color: #333;
+}
+
+/* Notifications with cleaner design and icons */
+.notification {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: opacity 0.3s ease;
+}
+
+/* Chatbot with improved message bubbles and product options */
+.message {
+    padding: 0.75rem 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.product-option {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    transition: border-color 0.3s ease;
+}
+
+.product-option:hover {
+    border-color: #FFD700;
+}
+.category-dropdown { display: none; position: absolute; top: 100%; left: 0; background: white; border: 1px solid #e5e7eb; z-index: 10; }
+.category-item:hover .category-dropdown { display: block; }
+.dark .product-option {
+    border-color: #333;
+}
+
+/* Dark mode refinements for better contrast */
+.dark body {
+    background-color: #0f0f0f;
+    color: #e5e7eb;
+}
+
+.dark .bg-white {
+    background-color: #1a1a1a !important;
+}
+
+.dark .text-gray-800 {
+    color: #e5e7eb !important;
+}
+
+.dark .border-gray-300 {
+    border-color: #4b5563 !important;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .grid-cols-3 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .modal-content {
+        max-width: 95vw;
+    }
+
+    .chatbot-container {
+        width: 100vw;
+        height: 100vh;
+        bottom: 0;
+        right: 0;
+        border-radius: 0;
+    }
+}
+
+/* Scrollbar styling for consistency */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f3f4f6;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9ca3af;
+    border-radius: 3px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #6b7280;
+}
